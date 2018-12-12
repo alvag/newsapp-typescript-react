@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import './App.css';
 import Header from './components/Header';
+import News from './components/News';
 import { INews } from './Interfaces';
 import Utils from './Utils';
 
@@ -20,8 +21,12 @@ class App extends Component<{}, IAppState> {
 
     public render() {
         return (
-            <div>
+            <div className="contenedor-app">
                 <Header title="Noticias" />
+
+                <div className="container white contenedor-noticia">
+                    <News news={this.state.news} />
+                </div>
             </div>
         );
     }
