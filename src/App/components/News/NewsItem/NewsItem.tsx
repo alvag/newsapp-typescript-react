@@ -2,13 +2,29 @@ import React from 'react';
 import { INews } from '../../../Interfaces';
 
 interface IProps {
-    itemNew: INews;
+    newsItem: INews;
 }
 
 const NewsItem = (props: IProps) => {
-    return (
-        <div>
+    const newsItem = props.newsItem;
 
+    return (
+        <div className="col s12 m6 l4">
+            <div className="card">
+                <div className="card-image">
+                    <img src={newsItem.urlToImage} alt={newsItem.title} />
+                    <span className="card-title">{newsItem.source.name}</span>
+                </div>
+                <div className="card-content">
+                    <h3>{newsItem.title}</h3>
+                    <p>{newsItem.description}</p>
+                </div>
+                <div className="card-action">
+                    <a href={newsItem.url} target="_blank" className="waves-effects waves-light btn">
+                        Noticia Completa
+                         </a>
+                </div>
+            </div>
         </div>
     );
 };

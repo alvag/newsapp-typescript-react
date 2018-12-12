@@ -6,4 +6,7 @@ export interface INews {
     title: string;
     url: string;
     urlToImage: string;
+    source: {
+        name: string
+    };
 }

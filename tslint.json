@@ -23,6 +23,7 @@
                 "multiline": "never",
                 "singleline": "never"
             }
-        ]
+        ],
+        "jsx-no-multiline-js": false
     }
 }

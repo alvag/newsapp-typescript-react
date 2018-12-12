@@ -24,7 +24,7 @@ class App extends Component<{}, IAppState> {
             <div className="contenedor-app">
                 <Header title="Noticias" />
 
-                <div className="container white contenedor-noticia">
+                <div className="container white contenedor-noticias">
                     <News news={this.state.news} />
                 </div>
             </div>
