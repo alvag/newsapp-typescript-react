@@ -9,9 +9,10 @@ interface IProps {
 class News extends Component<IProps> {
 
     public render() {
+        const news = this.props.news;
         return (
             <div className="row">
-                {this.props.news.map((newsItem, index) => (
+                {news.map((newsItem, index) => (
                     <NewsItem key={index} newsItem={newsItem} />
                 ))}
             </div>
