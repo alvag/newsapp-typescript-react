@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
+import { CSSTransition, TransitionGroup } from 'react-transition-group';
 import { INews } from '../../Interfaces';
+import './News.css';
 import NewsItem from './NewsItem';
 
 interface IProps {
@@ -12,9 +14,14 @@ class News extends Component<IProps> {
         const news = this.props.news;
         return (
             <div className="row">
-                {news.map((newsItem, index) => (
-                    <NewsItem key={index} newsItem={newsItem} />
-                ))}
+                <TransitionGroup>
+                    {news.map((newsItem, index) => (
+                        <CSSTransition key={index} classNames="fade" timeout={500}>
+                            <NewsItem newsItem={newsItem} />
+                        </CSSTransition>
+                    ))}
+                </TransitionGroup>
+
             </div>
         );
     }
