@@ -1,5 +1,6 @@
 import React from 'react';
 import { INews } from '../../../Interfaces';
+import './NewsItem.css';
 
 interface IProps {
     newsItem: INews;
